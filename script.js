@@ -34,7 +34,7 @@ function noBlanks() {
     array.push(inputAux4.value);
 
     array.forEach(element => {
-        if (element !== ""){
+        if (element === ""){  //Aqui nos quedamos
             arrayValid.push(element);
         }
     });
