@@ -53,25 +53,18 @@ function botonVerificacion() {
     noBlanks();   
 }
 
-/*
+
 function handleSubmit(event) {
     event.preventDefault();
   
     if (localStorage.getItem("formSubmitted")) {
       alert("Ya has enviado este formulario.");
+      botonEnviarC.disabled = true;
       return;
     }
   
     // Código para enviar el formulario
     // ...
-    
-  
-    localStorage.setItem("formSubmitted", "true");
-    alert("Formulario enviado con éxito.");
-}
-*/
-
-function submitInfo() {
     event.preventDefault();
 
     botonEnviarC.disabled = true;
@@ -88,6 +81,14 @@ function submitInfo() {
         alert(data);
         window.location.href = "./thanks.html";
     });
+  
+    localStorage.setItem("formSubmitted", "true");
+    alert("Formulario enviado con éxito.");
 }
 
-botonEnviarC.addEventListener("click", submitInfo);
+
+function submitInfo() {
+    
+}
+
+botonEnviarC.addEventListener("click", handleSubmit);
