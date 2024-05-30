@@ -53,6 +53,15 @@ function botonVerificacion() {
     noBlanks();   
 }
 
+function verificarBlancos() {
+    if (inputPres.value !== "" && inputSec.value !== "" && inputAux1.value !== "" && inputAux2.value !== "" && inputAux3.value !== "" && inputAux4.value !== "") {
+        botonEnviarC.disabled = false;
+    } else {
+        botonEnviarC.disabled = true;
+        alert ("No es posible dejar campos en blanco");
+    }
+}
+
 /*
 function handleSubmit(event) {
     event.preventDefault();
